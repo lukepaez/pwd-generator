@@ -1,8 +1,8 @@
 import * as pwd from 'generate-password';
 
-export const getPassword = () => {
+export const getPassword = (headers: any) => {
     const password = pwd.generate({
-        length: 10,
+        length: parseInt(headers.length),
         numbers: true,
         symbols: true,
         lowercase: true,
